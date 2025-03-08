@@ -1,7 +1,5 @@
 {
   "functions": {
-    "api/middleware.ts": {
-      "runtime": "edge"
-    }
+    "api/restricted.ts": {}
   }
 }
