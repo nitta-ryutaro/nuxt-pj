@@ -1,7 +1,7 @@
 {
   "functions": {
-		"api/middleware.ts": {
-			"runtime": "nodejs18.x"
-		}
-	}
+    "api/middleware.ts": {
+      "runtime": "edge"
+    }
+  }
 }
