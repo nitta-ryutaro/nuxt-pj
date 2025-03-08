@@ -1,5 +1,7 @@
 {
   "functions": {
-    "api/restricted.ts": {}
+    "api/restricted.ts": {
+      "maxDuration": 5
+    }
   }
 }
