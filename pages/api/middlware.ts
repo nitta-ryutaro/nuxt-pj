@@ -1,13 +1,18 @@
-// api/middleware.ts
-export default function handler(req: any, res: any) {
+export default async function handler(req: Request) {
     const geo = req.geo;  // Edge Functions での地理情報
 
     if (geo.country !== 'JP') {  // 日本以外の国からアクセスを拒否
-      return res.status(403).json({ message: 'Access Denied' });
+      return new Response(JSON.stringify({ message: 'Access Denied' }), {
+        status: 403,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     // 日本からのアクセスは許可
-    return res.status(200).json({ message: 'Welcome from Japan!' });
+    return new Response(JSON.stringify({ message: 'Welcome from Japan!' }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   export const config = {
